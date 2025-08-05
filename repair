@@ -1,0 +1,43 @@
+cd /tmp
+git clone https://github.com/neo7530/wpsd_sbin
+rm -r /usr/local/sbin/.git
+cp -r /tmp/wpsd_sbin/.git/ /usr/local/sbin/
+cd /usr/local/sbin/
+git checkout .
+chmod +x *
+chmod +x .*
+cd /tmp
+git clone https://github.com/neo7530/wpsd_bin
+rm -r /usr/local/bin/.git
+cp -r /tmp/wpsd_bin/.git/ /usr/local/bin/
+cd /usr/local/bin/
+git checkout .
+chmod +x *
+chmod +x .*
+
+cd /tmp
+git clone https://github.com/neo7530/wpsd_dash
+rm -r /var/www/dashboard/.git
+cp -r /tmp/wpsd_dash/.git/ /var/www/dashboard/
+cd /var/www/dashboard
+git checkout .
+chown -R www-data:pi-star *
+
+cd /root
+
+sed -i -f frn_patch /usr/local/sbin/init-update
+sed -i -f frn_patch /usr/local/sbin/wpsd-hostfile-update
+
+init-update
+
+cd /root
+
+sed -i -f frn_patch2 /var/www/dashboard/mmdvmhost/caller_details_table.php
+sed -i -f frn_patch2 /var/www/dashboard/mmdvmhost/last_heard_table.php
+sed -i -f frn_patch2 /var/www/dashboard/mmdvmhost/local_tx_table.php
+
+sed -i -f frn_patch_motd /usr/local/sbin/wpsd-version
+
+motdgen
+
+init 6

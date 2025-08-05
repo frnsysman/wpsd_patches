@@ -1,0 +1,1 @@
+/DisplayRepoStatus \"\/usr\/local\/bin"/a echo -e "\\nThis WPSD Image is based on the excellent revision by ${COL_LIGHT_ORANGE}BM4RCO - Marco${COL_NC}\\nand some additiontal modifications by ${COL_LIGHT_ORANGE}KDR981 - Dirk${COL_NC}\\nfor the FreeDMR project from freeradionetwork.de\\n"
