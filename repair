@@ -23,6 +23,10 @@ cd /var/www/dashboard
 git checkout .
 chown -R www-data:pi-star *
 
+#init-update
+
+#################### Start of FRN-specific additions by KDR981
+
 cd /root
 
 sed -i -f frn_patch /usr/local/sbin/init-update
@@ -39,5 +43,7 @@ sed -i -f frn_patch2 /var/www/dashboard/mmdvmhost/local_tx_table.php
 sed -i -f frn_patch_motd /usr/local/sbin/wpsd-version
 
 motdgen
+
+#################### End of FRN-specific additions by KDR981
 
 init 6
