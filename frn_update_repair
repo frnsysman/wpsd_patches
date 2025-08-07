@@ -1,8 +1,8 @@
-sudo su
 cd /tmp
 git clone https://github.com/frnsysman/wpsd_patches
 cd wpsd_patches
 cp -p * /root
 cd /root
 chmod +x repair
+
 chmod +x frn_update_repair
