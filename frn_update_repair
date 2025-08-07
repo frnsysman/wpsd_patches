@@ -6,4 +6,6 @@ cp -p * /root
 cd /root
 chmod +x repair
 chmod +x frn_update_repair
+rm frn_patch frn_patch2 frn_patch_motd
+
 
