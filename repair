@@ -29,18 +29,20 @@ chown -R www-data:pi-star *
 
 cd /root
 
-sed -i -f frn_patch /usr/local/sbin/init-update
-sed -i -f frn_patch /usr/local/sbin/wpsd-hostfile-update
+sed -i -f frn_patch.sed /usr/local/sbin/init-update
+sed -i -f frn_patch.sed /usr/local/sbin/wpsd-hostfile-update
 
 init-update
 
 cd /root
 
-sed -i -f frn_patch2 /var/www/dashboard/mmdvmhost/caller_details_table.php
-sed -i -f frn_patch2 /var/www/dashboard/mmdvmhost/last_heard_table.php
-sed -i -f frn_patch2 /var/www/dashboard/mmdvmhost/local_tx_table.php
+sed -i -f frn_patch2.sed /var/www/dashboard/mmdvmhost/caller_details_table.php
+sed -i -f frn_patch2.sed /var/www/dashboard/mmdvmhost/last_heard_table.php
+sed -i -f frn_patch2.sed /var/www/dashboard/mmdvmhost/local_tx_table.php
 
-sed -i -f frn_patch_motd /usr/local/sbin/wpsd-version
+sed -i -f frn_patch3.sed /var/www/dashboard/index.php
+
+sed -i -f frn_patch_motd.sed /usr/local/sbin/wpsd-version
 
 motdgen
 
