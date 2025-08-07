@@ -1,0 +1,10 @@
+cd /tmp
+rm -r wpsd_patches
+git clone https://github.com/frnsysman/wpsd_patches
+cd wpsd_patches
+cp -p * /root
+cd /root
+chmod +x repair
+chmod +x frn_update_repair
+chmod +x frn_update_repair_step2
+rm frn_patch frn_patch2 frn_patch3 frn_patch_motd
