@@ -1,0 +1,1 @@
+/source \/usr\/local\/sbin\/.wpsd-common-funcs/i sed -i \'s/hostFileURL=\"https:\\/\\/fdmr\\.dynbox\\.net\\/wpsd\"/hostFileURL=\"http:\\/\\/dmr446\\.freeradionetwork\\.de\\/fdmr-data\\/wpsd\"/g\' /usr/local/sbin/.wpsd-common-funcs
