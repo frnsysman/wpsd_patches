@@ -1,1 +1,1 @@
-s/$row = fgets($handle,1024);/$row = fgets($handle,2028);/g
+s/$row = fgets($handle,1024);/$row = fgets($handle,2048);/g
